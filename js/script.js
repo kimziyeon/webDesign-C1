@@ -59,17 +59,18 @@ $(function () {
 
 
     // 탭
-    $('.menu>li').click(function () {
-        $('.menu>li').removeClass('on')
+
+    $('.con1>ul>li').click(function () {
+        $('.con1>ul>li').removeClass();
         $(this).addClass('on')
-        $('.menu>li').children('.tab').hide();
+        $('.con1>ul>li').children('.tab').hide();
         $(this).children('.tab').show();
     })
 
-    $('.menu>li').focusin(function () {
-        $('.menu>li').removeClass('on')
+    $('.con1>ul>li').focusin(function () {
+        $('.con1>ul>li').removeClass();
         $(this).addClass('on')
-        $('.menu>li').children('.tab').hide();
+        $('.con1>ul>li').children('.tab').hide();
         $(this).children('.tab').show();
     })
 

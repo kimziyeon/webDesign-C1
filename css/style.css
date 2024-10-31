@@ -170,57 +170,57 @@ nav>ul>li>a.on {
     width: 400px;
 }
 
-.con1 .menu {
+.con1>ul {
     width: 400px;
     display: flex;
     position: relative;
 }
 
-.con1 .menu>li {
-    width: 120px;
-    background-color: sandybrown;
-    color: #fff;
-}
-
-.con1 .menu>li.on {
-    background-color: #f6b62c;
-    color: #333;
-}
-
-
-
-.con1 .menu>li>a {
-    font-weight: bold;
-    display: block;
-    padding: 10px;
+.con1>ul>li {
+    width: 100px;
+    background-color: rgb(246, 182, 44, 0.5);
     height: 40px;
+    text-align: center;
 }
+
+.con1>ul>li>a {
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+.con1>ul>li.on {
+    background-color: #f6b62c;
+}
+
+
 
 .notice {
+    width: 400px;
+    height: 160px;
+    text-align: left;
+    background-color: #f6b62c;
+    padding: 20px;
     /* display: none; */
 }
 
-.notice>ul {
-    margin-top: 20px;
-}
-
-.notice>ul>li {
+.notice>li {
+    display: flex;
+    margin: 10px 0;
     border-bottom: 1px solid #333;
-    margin: 10px 30px;
     padding-left: 5px;
 }
 
-.notice>ul>li>a {
-    width: 400px;
-    display: flex;
+.notice>li:hover {
+    opacity: 0.7;
 }
 
-.notice>ul>li .tt {
-    width: 250px;
+.notice>li>a {}
+
+.notice>li .tt {
+    width: 270px;
 }
-
-
-
 
 
 .gall {
@@ -229,31 +229,26 @@ nav>ul>li>a.on {
 
 .gall>ul {
     width: 400px;
+    height: 160px;
+    background-color: #f6b62c;
     display: flex;
     gap: 5px;
-    justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    align-content: center;
+    justify-content: center;
 }
 
 .gall>ul>li {}
 
 .gall>ul>li>a {
     display: block;
-    border: 5px double #333;
+    border: 3px double #333;
 }
-
 
 .tab {
     position: absolute;
-    top: 40px;
     left: 0;
-    width: 400px;
-    height: 160px;
-    background-color: #f6b62c;
 }
-
-
 
 
 
