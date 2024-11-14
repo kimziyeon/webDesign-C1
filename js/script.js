@@ -1,10 +1,8 @@
 $(function () {
 
-
-    // 헤더
+    // 네브
     $('nav>ul>li').mouseenter(function () {
         $(this).children('.sub').stop().slideDown();
-
     })
     $('nav>ul>li').mouseleave(function () {
         $(this).children('.sub').stop().slideUp();
@@ -12,25 +10,22 @@ $(function () {
 
     $('nav>ul>li').focusin(function () {
         $(this).children('.sub').stop().slideDown();
-        $(this).children('a').addClass('on')
+        $(this).children('a').addClass('on');
     })
-
     $('nav>ul>li').focusout(function () {
         $(this).children('.sub').stop().slideUp();
-        $(this).children('a').removeClass('on')
+        $(this).children('a').removeClass('on');
     })
-
 
     $('.sub>li').focusin(function () {
-        $(this).children('a').addClass('on')
+        $(this).children('a').addClass('on');
     })
     $('.sub>li').focusout(function () {
-        $(this).children('a').removeClass('on')
-
+        $(this).children('a').removeClass('on');
     })
 
 
-    //슬라이드
+    // 슬라이드
 
     var s = 0;
     function slide() {
@@ -40,11 +35,26 @@ $(function () {
         } else {
             s = 0;
         }
-        $('.slide ul li').fadeOut();
-        $('.slide ul li').eq(s).fadeIn();
-
+        $('.slide>ul>li').fadeOut();
+        $('.slide>ul>li').eq(s).fadeIn();
     }
     setInterval(slide, 2000)
+
+    //  탭
+    $('.notigall>ul>li').click(function () {
+        $('.notigall>ul>li').removeClass('on')
+        $(this).addClass('on');
+        $('.tab').hide();
+        $(this).children('.tab').show();
+    })
+
+    $('.notigall>ul>li').focusin(function () {
+        $('.notigall>ul>li').removeClass('on')
+        $(this).addClass('on');
+        $('.tab').hide();
+        $(this).children('.tab').show();
+    })
+
 
 
 
@@ -57,21 +67,5 @@ $(function () {
         $('.pop').hide();
     })
 
-
-    // 탭
-
-    $('.con1>ul>li').click(function () {
-        $('.con1>ul>li').removeClass();
-        $(this).addClass('on')
-        $('.con1>ul>li').children('.tab').hide();
-        $(this).children('.tab').show();
-    })
-
-    $('.con1>ul>li').focusin(function () {
-        $('.con1>ul>li').removeClass();
-        $(this).addClass('on')
-        $('.con1>ul>li').children('.tab').hide();
-        $(this).children('.tab').show();
-    })
 
 })
